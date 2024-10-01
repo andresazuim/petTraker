@@ -1,10 +1,10 @@
-package com.petTraker.petTraker;
+package com.petTracker.petTracker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PetTrakerApplicationTests {
+class PetTrackerApplicationTests {
 
 	@Test
 	void contextLoads() {
