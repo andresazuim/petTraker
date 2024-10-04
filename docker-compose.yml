@@ -6,4 +6,4 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_DB=pettracker
     ports:
-      - "5432:5432"
+      - "5433:5432" # mapeie a porta 5433 do host para a porta 5432 do contêiner
