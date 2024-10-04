@@ -25,8 +25,9 @@ O **PetTracker** é um aplicativo desenvolvido em **Java com Spring Boot** para 
 ## Rotas da API (em desenvolvimento)
 
 1. **Usuários**
-   - `POST /usuarios` - Cadastrar um novo usuário.
-   - `GET /usuarios/{id}` - Obter informações de um usuário específico.
+   - `POST /api/usuarios` - Cadastrar um novo usuário.
+   - `GET /api/usuarios`- Obtém informações de todos os usuãrios
+   - `GET /api/usuarios/{id}` - Obter informações de um usuário específico.
 
 2. **Animais**
    - `POST /animais` - Cadastrar um novo animal.
