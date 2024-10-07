@@ -15,6 +15,17 @@ public class Usuario {
     @Column(unique = true, nullable = false)
     private String email;
 
+    @Column(nullable = false)
+    private boolean ativo;
+
+    public boolean getAtivo(){
+        return true;
+    }
+
+    public void setAtivo(boolean ativo){
+        this.ativo = ativo;
+    }
+
     public Long getId() {
         return id;
     }

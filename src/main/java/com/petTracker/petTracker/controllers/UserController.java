@@ -2,6 +2,7 @@ package com.petTracker.petTracker.controllers;
 
 import com.petTracker.petTracker.entities.Usuario;
 import com.petTracker.petTracker.services.UserService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,5 +32,14 @@ public class UserController {
     public ResponseEntity<Usuario> findById(@PathVariable  Long id) {
        Usuario usuario = userService.findById(id);
         return ResponseEntity.ok(usuario);
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
+        try {
+            Usuario usuario = userService.deleteUser(id);
+            return ResponseEntity.ok(usuario);
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
     }
 }
